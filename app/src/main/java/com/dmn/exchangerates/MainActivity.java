@@ -105,8 +105,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             Intent calcOpt = new Intent(MainActivity.this, CalculatorActivity.class);
             startActivity(calcOpt);
         }
+        else if(id == R.id.nav_about){
+            Intent aboutOpt = new Intent(MainActivity.this, AboutActivity.class);
+            startActivity(aboutOpt);
+        }
         else if(id == R.id.nav_info){
-            Intent infoOpt = new Intent(MainActivity.this, AboutActivity.class);
+            Intent infoOpt = new Intent(MainActivity.this, InformationActivity.class);
             startActivity(infoOpt);
         }
 

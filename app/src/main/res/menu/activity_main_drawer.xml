@@ -8,7 +8,7 @@
         android:title="Kalkulator" />
     <item
         android:id="@+id/nav_info"
-        android:title="Informacje" />
+        android:title="Informacje o walutach" />
     <item
         android:id="@+id/nav_about"
         android:title="O aplikacji" />
