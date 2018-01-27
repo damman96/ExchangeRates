@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">Kursy Walut</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="info">Aplikacja "Kursy Walut" - pozwala na sprawdzenie wybranych kursów walut z całego świata.
+        \n\nWbudowany kalkulator pozwala na szybkie przeliczenie wartości danej waluty na inną dostępną w aplikacji.</string>
+
+    <string name="no_internet_info">Nie można wyświetlić danych.\nBrak połączenia z internetem!</string>
+
+    <string-array name="currency_names">
+        <item>Dolar australijski</item>
+        <item>Lew bułgarski</item>
+        <item>Real brazilijski</item>
+        <item>Dolar kanadyjski</item>
+        <item>Frank szwajcarski</item>
+        <item>Renminbi</item>
+        <item>Korona czeska</item>
+        <item>Korona duńska</item>
+        <item>Euro</item>
+        <item>Funt szterling</item>
+        <item>Dolar hongkoński</item>
+        <item>Kuna chorwacka</item>
+        <item>Forint węgierski</item>
+        <item>Rupia indonezyjskie</item>
+        <item>Jen japoński</item>
+        <item>Won południowokoreański</item>
+        <item>Peso meksykańskie</item>
+        <item>Ringgit malezyjski</item>
+        <item>Korona norweska</item>
+        <item>Dolar nowozelandzki</item>
+        <item>Peso filipińskie</item>
+        <item>Lej rumuński</item>
+        <item>Rubel rosyjski</item>
+        <item>Korona szwedzka</item>
+        <item>Dolar singapurski</item>
+        <item>Taht tajski</item>
+        <item>Lira turecka</item>
+        <item>Dolar amerykański </item>
+        <item>Rand południowoafrykański</item>
+    </string-array>
+</resources>
