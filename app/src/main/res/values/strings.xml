@@ -9,6 +9,8 @@
 
     <string name="no_internet_info">Nie można wyświetlić danych.\nBrak połączenia z internetem!</string>
 
+    <string name="data_format">Przykładowe poprawne wartości:\n3.4523, 6.3478, 19.5623</string>
+
     <string-array name="currency_names">
         <item>Dolar australijski</item>
         <item>Lew bułgarski</item>

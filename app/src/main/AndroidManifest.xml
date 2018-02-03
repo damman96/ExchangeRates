@@ -29,18 +29,16 @@
             </intent-filter>
         </activity>
 
-        <activity
-            android:name=".CalculatorActivity"
+        <activity android:name=".CalculatorActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity
-            android:name=".AboutActivity"
+        <activity android:name=".AboutActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-
-        <activity
-            android:name=".NoInternetActivity"
+        <activity android:name=".NoInternetActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity android:name=".InformationActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".SettingsActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
 
     </application>
 
