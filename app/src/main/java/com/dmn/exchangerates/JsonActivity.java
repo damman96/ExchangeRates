@@ -220,7 +220,6 @@ public class JsonActivity extends AppCompatActivity{
             if(isNetworkAvailable()) {
                 hashMap = new HashMap<>(getData());
                 hashMapDouble = new HashMap<>(getDoubleData());
-
             }
             return null;
         }
@@ -233,9 +232,9 @@ public class JsonActivity extends AppCompatActivity{
                 startActivity(intent);
             }
             else {
+                DataHolder.hashMap = hashMap;
+                DataHolder.hashMapDouble = hashMapDouble;
                 Intent intent = new Intent(JsonActivity.this, MainActivity.class);
-                intent.putExtra("data", hashMap);
-                intent.putExtra("dataDouble", hashMapDouble);
                 startActivity(intent);
             }
 

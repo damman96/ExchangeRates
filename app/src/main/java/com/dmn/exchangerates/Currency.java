@@ -25,5 +25,6 @@ public class Currency {
     public void setValue(String value) {
         this.value = value;
     }
+
 }
 

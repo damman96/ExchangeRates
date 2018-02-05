@@ -45,11 +45,13 @@ public class CurrencyAdapter extends BaseAdapter {
         TextView tvShortcut = (TextView)view.findViewById(R.id.shortcut);
         TextView tvValue = (TextView)view.findViewById(R.id.value);
         TextView tvName = (TextView)view.findViewById(R.id.name);
+        TextView tvUserValue = (TextView)view.findViewById(R.id.userValue);
         ImageView imgView = (ImageView)view.findViewById(R.id.imageView);
 
         tvShortcut.setText(currencyList.get(position).getShortcut());
         tvValue.setText(currencyList.get(position).getValue());
         tvName.setText(names[position]);
+        tvUserValue.setText(DataHolder.getInstance().getUserValue());
         imgView.setImageResource(imgid[position]);
 
         return view;

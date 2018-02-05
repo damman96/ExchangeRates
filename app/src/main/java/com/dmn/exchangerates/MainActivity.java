@@ -26,11 +26,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Intent intent = getIntent();
-        HashMap<String, String> mapList = (HashMap<String, String>)intent.getSerializableExtra("data");
+        DataHolder.getInstance().getUserValue();
 
-        Intent intent1 = getIntent();
-        HashMap<String, Double> mapListDouble = (HashMap<String, Double>) intent1.getSerializableExtra("dataDouble");
+        String userValueString = DataHolder.getInstance().getUserValue();
+        final Double userValueDouble = Double.parseDouble(userValueString);
+
+        HashMap<String, String> mapList = DataHolder.hashMap;
+
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -111,6 +113,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         switch (item.getItemId()) {
             case R.id.action_settings:
                 startActivity(new Intent(MainActivity.this, SettingsActivity.class));
+                finish();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
