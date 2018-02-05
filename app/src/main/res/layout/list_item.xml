@@ -7,9 +7,9 @@
 
     <TextView
         android:id="@+id/value"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="30dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginTop="56dp"
         android:layout_weight="66.6"
         android:gravity="center"
@@ -33,7 +33,7 @@
         android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.534"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -55,10 +55,9 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="30dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="56dp"
         android:gravity="center"
         android:text="PLN ="
@@ -66,13 +65,11 @@
         android:textSize="16sp"
         android:textStyle="italic"
         app:layout_constraintEnd_toStartOf="@+id/value"
-        app:layout_constraintHorizontal_bias="0.076"
-        app:layout_constraintStart_toEndOf="@+id/userValue"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/shortcut"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="30dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="16dp"
@@ -89,13 +86,15 @@
         android:id="@+id/userValue"
         android:layout_width="0dp"
         android:layout_height="30dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="144dp"
         android:layout_marginTop="56dp"
         android:gravity="center"
         android:text="@string/start_value"
         android:textAlignment="center"
         android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 
