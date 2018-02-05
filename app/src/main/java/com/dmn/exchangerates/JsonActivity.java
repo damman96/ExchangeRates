@@ -21,6 +21,7 @@ public class JsonActivity extends AppCompatActivity{
     private String urlData = "https://api.fixer.io/latest?base=PLN";
 
     public HashMap<String, String> hashMap = new HashMap<>();
+    public HashMap<String, Double> hashMapDouble = new HashMap<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -28,18 +29,6 @@ public class JsonActivity extends AppCompatActivity{
         setContentView(R.layout.activity_json);
 
         new GetData().execute();
-    }
-
-    private void showToast(final String message) {
-        runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                Toast.makeText(getApplicationContext(),
-                        message,
-                        Toast.LENGTH_SHORT)
-                        .show();
-            }
-        });
     }
 
     protected HashMap<String, String> getData(){
@@ -126,6 +115,90 @@ public class JsonActivity extends AppCompatActivity{
         return hashMap;
     }
 
+    protected HashMap<String, Double> getDoubleData(){
+
+        String jsonString = new HttpHandler().makeServiceCall(urlData);
+
+        if(jsonString != null){
+
+            try{
+                JSONObject jsonObject = new JSONObject(jsonString);
+
+                String base = jsonObject.getString("base");
+                String date = jsonObject.getString("date");
+
+                JSONObject rates = jsonObject.getJSONObject("rates");
+                String aud = rates.getString("AUD");
+                String bgn = rates.getString("BGN");
+                String brl = rates.getString("BRL");
+                String cad = rates.getString("CAD");
+                String chf = rates.getString("CHF");
+                String cny = rates.getString("CNY");
+                String czk = rates.getString("CZK");
+                String dkk = rates.getString("DKK");
+                String gbp = rates.getString("GBP");
+                String hkd = rates.getString("HKD");
+                String hrk = rates.getString("HRK");
+                String huf = rates.getString("HUF");
+                String idr = rates.getString("IDR");
+                String jpy = rates.getString("JPY");
+                String krw = rates.getString("KRW");
+                String mxn = rates.getString("MXN");
+                String myr = rates.getString("MYR");
+                String nok = rates.getString("NOK");
+                String nzd = rates.getString("NZD");
+                String php = rates.getString("PHP");
+                String ron = rates.getString("RON");
+                String rub = rates.getString("RUB");
+                String sek = rates.getString("SEK");
+                String sgd = rates.getString("SGD");
+                String thb = rates.getString("THB");
+                String trk = rates.getString("TRY");
+                String usd = rates.getString("USD");
+                String zar = rates.getString("ZAR");
+                String eur = rates.getString("EUR");
+
+                hashMapDouble.put("AUD", Double.parseDouble(aud));
+                hashMapDouble.put("BGN", Double.parseDouble(bgn));
+                hashMapDouble.put("BRL", Double.parseDouble(brl));
+                hashMapDouble.put("CAD", Double.parseDouble(cad));
+                hashMapDouble.put("CHF", Double.parseDouble(chf));
+                hashMapDouble.put("CNY", Double.parseDouble(cny));
+                hashMapDouble.put("CZK", Double.parseDouble(czk));
+                hashMapDouble.put("DKK", Double.parseDouble(dkk));
+                hashMapDouble.put("EUR", Double.parseDouble(eur));
+                hashMapDouble.put("GBP", Double.parseDouble(gbp));
+                hashMapDouble.put("HKD", Double.parseDouble(hkd));
+                hashMapDouble.put("HRK", Double.parseDouble(hrk));
+                hashMapDouble.put("HUF", Double.parseDouble(huf));
+                hashMapDouble.put("IDR", Double.parseDouble(idr));
+                hashMapDouble.put("JPY", Double.parseDouble(jpy));
+                hashMapDouble.put("KRW", Double.parseDouble(krw));
+                hashMapDouble.put("MXN", Double.parseDouble(mxn));
+                hashMapDouble.put("MYR", Double.parseDouble(myr));
+                hashMapDouble.put("NOK", Double.parseDouble(nok));
+                hashMapDouble.put("NZD", Double.parseDouble(nzd));
+                hashMapDouble.put("PHP", Double.parseDouble(php));
+                hashMapDouble.put("RON", Double.parseDouble(ron));
+                hashMapDouble.put("RUB", Double.parseDouble(rub));
+                hashMapDouble.put("SEK", Double.parseDouble(sek));
+                hashMapDouble.put("SGD", Double.parseDouble(sgd));
+                hashMapDouble.put("THB", Double.parseDouble(thb));
+                hashMapDouble.put("TRY", Double.parseDouble(trk));
+                hashMapDouble.put("USD", Double.parseDouble(usd));
+                hashMapDouble.put("ZAR", Double.parseDouble(zar));
+
+
+            } catch (JSONException e) {
+                Log.e(TAG, "JSON parsing error: " + e.getMessage());
+            }
+        }
+        else{
+            Log.e(TAG, "Couldn't get json from server.");
+        }
+        return hashMapDouble;
+    }
+
     private boolean isNetworkAvailable() {
         ConnectivityManager connectivityManager
                 = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -146,6 +219,7 @@ public class JsonActivity extends AppCompatActivity{
 
             if(isNetworkAvailable()) {
                 hashMap = new HashMap<>(getData());
+                hashMapDouble = new HashMap<>(getDoubleData());
 
             }
             return null;
@@ -161,6 +235,7 @@ public class JsonActivity extends AppCompatActivity{
             else {
                 Intent intent = new Intent(JsonActivity.this, MainActivity.class);
                 intent.putExtra("data", hashMap);
+                intent.putExtra("dataDouble", hashMapDouble);
                 startActivity(intent);
             }
 

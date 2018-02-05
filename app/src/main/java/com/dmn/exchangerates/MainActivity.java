@@ -29,6 +29,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         Intent intent = getIntent();
         HashMap<String, String> mapList = (HashMap<String, String>)intent.getSerializableExtra("data");
 
+        Intent intent1 = getIntent();
+        HashMap<String, Double> mapListDouble = (HashMap<String, Double>) intent1.getSerializableExtra("dataDouble");
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
