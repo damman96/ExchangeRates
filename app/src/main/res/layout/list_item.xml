@@ -14,7 +14,6 @@
         android:layout_weight="66.6"
         android:gravity="center"
         android:text="value"
-        android:textAlignment="textEnd"
         android:textAllCaps="false"
         android:textSize="16sp"
         android:textStyle="italic"
@@ -62,14 +61,13 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="56dp"
         android:gravity="center"
-        android:text="1 PLN ="
-        android:textAlignment="viewEnd"
+        android:text="PLN ="
         android:textAllCaps="false"
         android:textSize="16sp"
         android:textStyle="italic"
         app:layout_constraintEnd_toStartOf="@+id/value"
         app:layout_constraintHorizontal_bias="0.866"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/userValue"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -80,12 +78,25 @@
         android:layout_marginEnd="16dp"
         android:layout_marginTop="56dp"
         android:gravity="center_vertical|center_horizontal"
-        android:text="shortcut"
+        android:text="shrtct"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/userValue"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="56dp"
+        android:text="@string/start_value"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:gravity="center"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </android.support.constraint.ConstraintLayout>
