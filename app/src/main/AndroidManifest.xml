@@ -30,15 +30,15 @@
         </activity>
 
         <activity android:name=".CalculatorActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:theme="@style/Theme.AppCompat.Light" />
         <activity android:name=".AboutActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:theme="@style/Theme.AppCompat.Light" />
         <activity android:name=".NoInternetActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity android:name=".InformationActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:theme="@style/Theme.AppCompat.Light" />
         <activity android:name=".SettingsActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+            android:theme="@style/Theme.AppCompat.Light"/>
+        <activity android:name=".CountryActivity"
+            android:theme="@style/Theme.AppCompat.Light" />
 
     </application>
 

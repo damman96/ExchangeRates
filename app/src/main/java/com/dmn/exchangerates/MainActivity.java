@@ -10,6 +10,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -31,8 +33,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         String userValueString = DataHolder.getInstance().getUserValue();
         final Double userValueDouble = Double.parseDouble(userValueString);
 
-        HashMap<String, String> mapList = DataHolder.hashMap;
-
+        HashMap<String, String> mapList = DataHolder.getHashMap();
+        HashMap<String, Double> mapListDouble = DataHolder.getHashMapDouble();
+        HashMap<String, Double> mapListResult;
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -46,6 +49,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        ModifyData modifyData = new ModifyData();
+        mapListResult = modifyData.changeData(userValueDouble, mapListDouble);
+        modifyData.convertData(mapList, mapListResult);
 
         lv = (ListView)findViewById(R.id.listView1);
 
@@ -91,6 +98,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         CurrencyAdapter currencyAdapter = new CurrencyAdapter(getApplicationContext(), currencyList, imgId, names);
         lv.setAdapter(currencyAdapter);
+
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                long pos = lv.getItemIdAtPosition(position);
+                Intent intent = new Intent(MainActivity.this, CountryActivity.class);
+                intent.putExtra("CountryName", pos);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -133,10 +150,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         else if(id == R.id.nav_about){
             Intent aboutOpt = new Intent(MainActivity.this, AboutActivity.class);
             startActivity(aboutOpt);
-        }
-        else if(id == R.id.nav_info){
-            Intent infoOpt = new Intent(MainActivity.this, InformationActivity.class);
-            startActivity(infoOpt);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

@@ -1,17 +1,16 @@
 <resources>
     <string name="app_name">Kursy Walut</string>
-
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-
     <string name="info">Aplikacja "Kursy Walut" - pozwala na sprawdzenie wybranych kursów walut z całego świata.
-        \n\nWbudowany kalkulator pozwala na szybkie przeliczenie wartości danej waluty na inną dostępną w aplikacji.</string>
-
+        \n\nW głównym oknie aplikacji widzimy ile obcej waluty możemy nabyć za zadeklarowaną wartość PLN.
+        \n\nPo naciśnięciu menu w prawym górnym rogu możemy ustawić zadeklarowaną przez siebie wartość PLN. Aplikacja posiada wbudowaną kontrolę przed niepożądanymi wartościami.
+        \n\nPo kliknięciu w którakolwiek z walut w oknie głównym ukazuje się nam krótkie info na temat kraju/kontynentu gdzie dana waluta jest wykorzystywana.</string>
     <string name="no_internet_info">Nie można wyświetlić danych.\nBrak połączenia z internetem!</string>
-
-    <string name="data_format">Przykładowe poprawne wartości:\n3.4523, 6.3478, 19.5623</string>
-
+    <string name="data_format">Przykładowe poprawne wartości:\n3.45, 6.347, 19.5623</string>
     <string name="start_value">1.00</string>
+    <string name="data_error">Błąd danych</string>
+    <string name="data_loading">Wczytywanie\ndanych</string>
 
     <string-array name="currency_names">
         <item>Dolar australijski</item>
@@ -41,7 +40,72 @@
         <item>Dolar singapurski</item>
         <item>Taht tajski</item>
         <item>Lira turecka</item>
-        <item>Dolar amerykański </item>
+        <item>Dolar amerykański</item>
         <item>Rand południowoafrykański</item>
     </string-array>
+
+    <string-array name="country_names">
+        <item>Australia</item>
+        <item>Bułgaria</item>
+        <item>Brazylia</item>
+        <item>Kanada</item>
+        <item>Szwajcaria</item>
+        <item>Chiny</item>
+        <item>Czechy</item>
+        <item>Dania</item>
+        <item>Euro</item>
+        <item>Wielka Brytania</item>
+        <item>Hong Kong</item>
+        <item>Chorwacja</item>
+        <item>Węgry</item>
+        <item>Indonezja</item>
+        <item>Japonia</item>
+        <item>Korea Południowa</item>
+        <item>Meksyk</item>
+        <item>Malezja</item>
+        <item>Norwegia</item>
+        <item>Nowa Zelandia</item>
+        <item>Filipiny</item>
+        <item>Rumunia</item>
+        <item>Rosja</item>
+        <item>Szwecja</item>
+        <item>Singapur</item>
+        <item>Tajlandia</item>
+        <item>Turcja</item>
+        <item>Stany Zjednoczone\nAmeryki</item>
+        <item>Republika Południowej\nAfryki</item>
+    </string-array>
+
+    <string-array name="country_about">
+        <item>Australia leży w Oceania, a jej kod kraju to AU (jej trzyliterowy kod to AUS).\n\nStolica: Canberra.\n\nLiczba ludności: 21,515,754.\n\nPowierzchnia: 7686850.0 km2.\n\nWaluta: AUD</item>
+        <item>Bułgaria leży w Europa, a jej kod kraju to BG (jej trzyliterowy kod to BGR).\n\nStolica: Sofia.\n\nLiczba ludności: 7,148,785.\n\nPowierzchnia: 110910.0 km2.\n\nWaluta: BGN</item>
+        <item>Brazylia leży w Ameryka Południowa, a jej kod kraju to BR (jej trzyliterowy kod to BRA).\n\nStolica: Brasília.\n\nLiczba ludności: 201,103,330.\n\nPowierzchnia: 8511965.0 km2.\n\nWaluta: BRL</item>
+        <item>Kanada leży w Ameryka Północna, a jej kod kraju to CA (jej trzyliterowy kod to CAN).\n\nStolica: Ottawa.\n\nLiczba ludności: 33,679,000.\n\nPowierzchnia: 9984670.0 km2.\n\nWaluta: CAD</item>
+        <item>Szwajcaria leży w Europa, a jej kod kraju to CH (jej trzyliterowy kod to CHE).\n\nStolica: Berno.\n\nLiczba ludności: 7,581,000.\n\nPowierzchnia: 41290.0 km2.\n\nWaluta: CHF</item>
+        <item>Chiny leży w Azja, a jej kod kraju to CN (jej trzyliterowy kod to CHN).\n\nStolica: Pekin.\n\nLiczba ludności: 1,330,044,000.\n\nPowierzchnia: 9596960.0 km2.\n\nWaluta: CNY</item>
+        <item>Republika Czeska leży w Europa, a jej kod kraju to CZ (jej trzyliterowy kod to CZE).\n\nStolica: Praga.\n\nLiczba ludności: 10,476,000.\n\nPowierzchnia: 78866.0 km2.\n\nWaluta: CZK</item>
+        <item>Dania leży w Europa, a jej kod kraju to DK (jej trzyliterowy kod to DNK).\n\nStolica: Kopenhaga.\n\nLiczba ludności: 5,484,000.\n\nPowierzchnia: 43094.0 km2.\n\nWaluta: DKK</item>
+        <item>Europa\n\nLiczba ludności: 717,374,635.\n\nPowierzchnia: 10,2 mln km2.\n\nWaluta: EUR</item>
+        <item>Zjednoczone Królestwo Wielkiej Brytanii leży w Europa, a jej kod kraju to GB (jej trzyliterowy kod to GBR).\n\nStolica: Londyn.\n\nLiczba ludności: 62,348,447.\n\nPowierzchnia: 244820.0 km2.\n\nWaluta: GBP</item>
+        <item>Hongkong leży w Azja, a jej kod kraju to HK (jej trzyliterowy kod to HKG).\n\nStolica: Hong Kong.\n\nLiczba ludności: 6,898,686.\n\nPowierzchnia: 1092.0 km2.\n\nWaluta: HKD</item>
+        <item>Chorwacja leży w Europa, a jej kod kraju to HR (jej trzyliterowy kod to HRV).\n\nStolica: Zagrzeb.\n\nLiczba ludności: 4,491,000.\n\nPowierzchnia: 56542.0 km2.\n\nWaluta: HRK</item>
+        <item>Węgry leży w Europa, a jej kod kraju to HU (jej trzyliterowy kod to HUN).\n\nStolica: Budapeszt.\n\nLiczba ludności: 9,982,000.\n\nPowierzchnia: 93030.0 km2.\n\nWaluta: HUF</item>
+        <item>Indonezja leży w Azja, a jej kod kraju to ID (jej trzyliterowy kod to IDN).\n\nStolica: Dżakarta.\n\nLiczba ludności: 242,968,342.\n\nPowierzchnia: 1919440.0 km2.\n\nWaluta: IDR</item>
+        <item>Japonia leży w Azja, a jej kod kraju to JP (jej trzyliterowy kod to JPN).\n\nStolica: Tokio.\n\nLiczba ludności: 127,288,000.\n\nPowierzchnia: 377835.0 km2.\n\nWaluta: JPY</item>
+        <item>Korea Południowa leży w Azja, a jej kod kraju to KO.\n\nStolica:Seul.\n\nLiczba ludności: 50,801,405.\n\nPowierzchnia: 100210.0 km2.\n\nWaluta: KRW</item>
+        <item>Meksyk leży w Ameryka Północna, a jej kod kraju to MX (jej trzyliterowy kod to MEX).\n\nStolica: Meksyk.\n\nLiczba ludności: 112,468,855.\n\nPowierzchnia: 1972550.0 km2.\n\nWaluta: MXN</item>
+        <item>Malezja leży w Azja, a jej kod kraju to MY (jej trzyliterowy kod to MYS).\n\nStolica: Kuala Lumpur.\n\nLiczba ludności: 28,274,729.\n\nPowierzchnia: 329750.0 km2.\n\nWaluta: MYR</item>
+        <item>Norwegia leży w Europa, a jej kod kraju to NO (jej trzyliterowy kod to NOR).\n\nStolica: Oslo.\n\nLiczba ludności: 5,009,150.\n\nPowierzchnia: 324220.0 km2.\n\nWaluta: NOK</item>
+        <item>Nowa Zelandia leży w Oceania, a jej kod kraju to NZ (jej trzyliterowy kod to NZL).\n\nStolica: Wellington.\n\nLiczba ludności: 4,252,277.\n\nPowierzchnia: 268680.0 km2.\n\nWaluta: NZD</item>
+        <item>Filipiny leży w Azja, a jej kod kraju to PH (jej trzyliterowy kod to PHL).\n\nStolica: Manila.\n\nLiczba ludności: 99,900,177.\n\nPowierzchnia: 300000.0 km2.\n\nWaluta: PHP</item>
+        <item>Rumunia leży w Europa, a jej kod kraju to RO (jej trzyliterowy kod to ROU).\n\nStolica: Bukareszt.\n\nLiczba ludności: 21,959,278.\n\nPowierzchnia: 237500.0 km2.\n\nWaluta: RON</item>
+        <item>Rosja leży w Europa, a jej kod kraju to RU (jej trzyliterowy kod to RUS).\n\nStolica: Moskwa.\n\nLiczba ludności: 140,702,000.\n\nPowierzchnia: 17100000.0 km2.\n\nWaluta: RUB</item>
+        <item>Szwecja leży w Europa, a jej kod kraju to SE (jej trzyliterowy kod to SWE).\n\nStolica: Sztokholm.\n\nLiczba ludności: 9,555,893.\n\nPowierzchnia: 449964.0 km2.\n\nWaluta: SEK</item>
+        <item>Singapur leży w Azja, a jej kod kraju to SG (jej trzyliterowy kod to SGP).\n\nStolica: Singapore.\n\nLiczba ludności: 4,701,069.\n\nPowierzchnia: 692.7 km2.\n\nWaluta: SGD</item>
+        <item>Tajlandia leży w Azja, a jej kod kraju to TH (jej trzyliterowy kod to THA).\n\nStolica: Bangkok.\n\nLiczba ludności: 67,089,500.\n\nPowierzchnia: 514000.0 km2.\n\nWaluta: THB</item>
+        <item>Turcja leży w Azja, a jej kod kraju to TR (jej trzyliterowy kod to TUR).\n\nStolica: Ankara.\n\nLiczba ludności: 77,804,122.\n\nPowierzchnia: 780580.0 km2.\n\nWaluta: TRY</item>
+        <item>Stany Zjednoczone leży w Ameryka Północna, a jej kod kraju to US (jej trzyliterowy kod to USA).\n\nStolica: Waszyngton.\n\nLiczba ludności: 310,232,863.\n\nPowierzchnia: 9629091.0 km2.\n\nWaluta: USD</item>
+        <item>Afryka Południowa leży w Afryka, a jej kod kraju to ZA (jej trzyliterowy kod to ZAF).\n\nStolica: Pretoria.\n\nLiczba ludności: 49,000,000.\n\nPowierzchnia: 1219912.0 km2.\n\nWaluta: ZAR</item>
+    </string-array>
+
 </resources>
