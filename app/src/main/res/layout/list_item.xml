@@ -10,7 +10,6 @@
         android:layout_width="0dp"
         android:layout_height="30dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="56dp"
         android:layout_weight="66.6"
         android:gravity="center"
@@ -20,8 +19,6 @@
         android:textSize="16sp"
         android:textStyle="italic"
         app:layout_constraintEnd_toStartOf="@+id/shortcut"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/textView"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -61,15 +58,16 @@
         android:id="@+id/textView"
         android:layout_width="0dp"
         android:layout_height="30dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginTop="56dp"
         android:gravity="center"
         android:text="PLN ="
         android:textAlignment="center"
         android:textAllCaps="false"
-        android:textSize="16sp"
+        android:textSize="14sp"
         android:textStyle="italic"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="232dp" />
+        app:layout_constraintEnd_toStartOf="@+id/value"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/shortcut"
@@ -81,7 +79,8 @@
         android:gravity="center_vertical|center_horizontal"
         android:text="shrtct"
         android:textAlignment="center"
-        android:textSize="16sp"
+        android:textSize="14sp"
+        android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
