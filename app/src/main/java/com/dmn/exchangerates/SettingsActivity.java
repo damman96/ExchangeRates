@@ -14,8 +14,8 @@ import java.util.Set;
 
 public class SettingsActivity extends AppCompatActivity {
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
+@Override
+protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.settings_main);
 
@@ -25,21 +25,21 @@ public class SettingsActivity extends AppCompatActivity {
         etUserValue.setText(DataHolder.getInstance().getUserValue());
 
         button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-            DataHolder.getInstance().setUserValue(etUserValue.getText().toString());
-            DataHolder.getInstance().setUserValueADouble(Double.parseDouble(etUserValue.getText().toString()));
-            Intent intent = new Intent(SettingsActivity.this, MainActivity.class);
-            startActivity(intent);
-            finish();
-            }
-        });
-    }
+                        @Override
+                        public void onClick(View v) {
+                                DataHolder.getInstance().setUserValue(etUserValue.getText().toString());
+                                DataHolder.getInstance().setUserValueADouble(Double.parseDouble(etUserValue.getText().toString()));
+                                Intent intent = new Intent(SettingsActivity.this, MainActivity.class);
+                                startActivity(intent);
+                                finish();
+                        }
+                });
+}
 
-    @Override
-    public void onBackPressed() {
+@Override
+public void onBackPressed() {
         Intent intent = new Intent(SettingsActivity.this, MainActivity.class);
         startActivity(intent);
         finish();
-    }
+}
 }

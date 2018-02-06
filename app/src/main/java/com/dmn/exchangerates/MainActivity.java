@@ -20,11 +20,11 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
-    private ListView lv;
-    private List<Currency> currencyList;
+private ListView lv;
+private List<Currency> currencyList;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
+@Override
+protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -57,10 +57,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         lv = (ListView)findViewById(R.id.listView1);
 
         Integer[] imgId = {R.drawable.aud, R.drawable.bgn, R.drawable.brl, R.drawable.cad, R.drawable.chf, R.drawable.cny,
-                R.drawable.czk, R.drawable.dkk, R.drawable.eur, R.drawable.gbp, R.drawable.hkd, R.drawable.hrk, R.drawable.huf,
-                R.drawable.idr, R.drawable.jpy, R.drawable.krw, R.drawable.mxn, R.drawable.myr, R.drawable.nok, R.drawable.nzd,
-                R.drawable.php, R.drawable.ron, R.drawable.rub, R.drawable.sek, R.drawable.sgd, R.drawable.thb, R.drawable.trk,
-                R.drawable.usd, R.drawable.zar,};
+                           R.drawable.czk, R.drawable.dkk, R.drawable.eur, R.drawable.gbp, R.drawable.hkd, R.drawable.hrk, R.drawable.huf,
+                           R.drawable.idr, R.drawable.jpy, R.drawable.krw, R.drawable.mxn, R.drawable.myr, R.drawable.nok, R.drawable.nzd,
+                           R.drawable.php, R.drawable.ron, R.drawable.rub, R.drawable.sek, R.drawable.sgd, R.drawable.thb, R.drawable.trk,
+                           R.drawable.usd, R.drawable.zar,};
 
         String[] names = getResources().getStringArray(R.array.currency_names);
 
@@ -100,64 +100,64 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         lv.setAdapter(currencyAdapter);
 
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                long pos = lv.getItemIdAtPosition(position);
-                Intent intent = new Intent(MainActivity.this, CountryActivity.class);
-                intent.putExtra("CountryName", pos);
-                startActivity(intent);
-            }
-        });
-    }
+                        @Override
+                        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                                long pos = lv.getItemIdAtPosition(position);
+                                Intent intent = new Intent(MainActivity.this, CountryActivity.class);
+                                intent.putExtra("CountryName", pos);
+                                startActivity(intent);
+                        }
+                });
+}
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
+@Override
+public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
-    }
+}
 
-    @Override
-    public void onBackPressed() {
+@Override
+public void onBackPressed() {
         Intent a = new Intent(Intent.ACTION_MAIN);
         a.addCategory(Intent.CATEGORY_HOME);
         a.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(a);
-    }
+}
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
+@Override
+public boolean onOptionsItemSelected(MenuItem item) {
         // Handle item selection
         switch (item.getItemId()) {
-            case R.id.action_settings:
+        case R.id.action_settings:
                 startActivity(new Intent(MainActivity.this, SettingsActivity.class));
                 finish();
                 return true;
-            default:
+        default:
                 return super.onOptionsItemSelected(item);
         }
-    }
+}
 
-    @SuppressWarnings("StatementWithEmptyBody")
-    @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
+@SuppressWarnings("StatementWithEmptyBody")
+@Override
+public boolean onNavigationItemSelected(MenuItem item) {
 
         int id = item.getItemId();
 
-        if(id == R.id.nav_calc){
-            Intent calcOpt = new Intent(MainActivity.this, CalculatorActivity.class);
-            startActivity(calcOpt);
+        if(id == R.id.nav_calc) {
+                Intent calcOpt = new Intent(MainActivity.this, CalculatorActivity.class);
+                startActivity(calcOpt);
         }
-        else if(id == R.id.nav_about){
-            Intent aboutOpt = new Intent(MainActivity.this, AboutActivity.class);
-            startActivity(aboutOpt);
+        else if(id == R.id.nav_about) {
+                Intent aboutOpt = new Intent(MainActivity.this, AboutActivity.class);
+                startActivity(aboutOpt);
         }
-        else if(id == R.id.nav_map){
-            Intent mapOpt = new Intent(MainActivity.this, MapsActivity.class);
-            startActivity(mapOpt);
+        else if(id == R.id.nav_map) {
+                Intent mapOpt = new Intent(MainActivity.this, MapsActivity.class);
+                startActivity(mapOpt);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
-    }
+}
 }

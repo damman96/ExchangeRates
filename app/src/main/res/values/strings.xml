@@ -5,7 +5,8 @@
     <string name="info">Aplikacja "Kursy Walut" - pozwala na sprawdzenie wybranych kursów walut z całego świata.
         \n\nW głównym oknie aplikacji widzimy ile obcej waluty możemy nabyć za zadeklarowaną wartość PLN.
         \n\nPo naciśnięciu menu w prawym górnym rogu możemy ustawić zadeklarowaną przez siebie wartość PLN. Aplikacja posiada wbudowaną kontrolę przed niepożądanymi wartościami.
-        \n\nPo kliknięciu w którakolwiek z walut w oknie głównym ukazuje się nam krótkie info na temat kraju/kontynentu gdzie dana waluta jest wykorzystywana.</string>
+        \n\nPo kliknięciu w którakolwiek z walut w oknie głównym ukazuje się nam krótkie info na temat kraju/kontynentu gdzie dana waluta jest wykorzystywana.
+        \n\nW menu po lewej stronie po wybraniu opcji Mapa mamy możliwośc sprawdzić w jakich krajach używa się walut z aplikacji.</string>
     <string name="no_internet_info">Nie można wyświetlić danych.\nBrak połączenia z internetem!</string>
     <string name="data_format">Przykładowe poprawne wartości:\n3.45, 6.347, 19.5623</string>
     <string name="start_value">1.00</string>
