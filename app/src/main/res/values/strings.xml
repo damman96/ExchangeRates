@@ -107,5 +107,6 @@
         <item>Stany Zjednoczone leży w Ameryka Północna, a jej kod kraju to US (jej trzyliterowy kod to USA).\n\nStolica: Waszyngton.\n\nLiczba ludności: 310,232,863.\n\nPowierzchnia: 9629091.0 km2.\n\nWaluta: USD.</item>
         <item>Afryka Południowa leży w Afryka, a jej kod kraju to ZA (jej trzyliterowy kod to ZAF).\n\nStolica: Pretoria.\n\nLiczba ludności: 49,000,000.\n\nPowierzchnia: 1219912.0 km2.\n\nWaluta: ZAR.</item>
     </string-array>
+    <string name="title_activity_maps">Map</string>
 
 </resources>

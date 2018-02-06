@@ -3,6 +3,8 @@ package com.dmn.exchangerates;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -28,6 +30,7 @@ public class CountryActivity extends AppCompatActivity {
         ImageView ivCountry = (ImageView)findViewById(R.id.ivCountry);
         TextView tvCountryName = (TextView)findViewById(R.id.tvCountryName);
         TextView tvCountryAbout = (TextView)findViewById(R.id.tvAboutCountry);
+
 
         switch (position){
             case 0:

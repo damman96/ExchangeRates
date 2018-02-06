@@ -151,6 +151,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             Intent aboutOpt = new Intent(MainActivity.this, AboutActivity.class);
             startActivity(aboutOpt);
         }
+        else if(id == R.id.nav_map){
+            Intent mapOpt = new Intent(MainActivity.this, MapsActivity.class);
+            startActivity(mapOpt);
+        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
